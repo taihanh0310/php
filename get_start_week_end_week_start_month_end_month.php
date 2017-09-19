@@ -1,0 +1,15 @@
+$current_date = date('Y-m-d', strtotime('now'));
+$curren_day_in_week = date('w');
+$week_start = date('Y-m-d', strtotime('-'.$curren_day_in_week.' days'));
+$week_end = date('Y-m-d', strtotime('+'.(6-$curren_day_in_week).' days'));
+$month_start = date('Y-m-01');
+$month_end = date('Y-m-t', strtotime($current_date));
+echo "Ngay hien tai: " . $current_date;
+echo "<br/>";
+echo "Ngay dau cua thang: ". $month_start;
+echo "<br/>";
+echo "Ngay cuoi cua thang: " . $month_end;
+echo "<br/>";
+echo "Ngay dau tien cua tuan: ". $week_start;
+echo "<br/>";
+echo "Ngay cuoi tuan: " . $week_end;
